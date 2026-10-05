@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Response Management Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Emergency Response Management Platform</h1>
+    <p>Report emergencies and manage response requests</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#report">Report Emergency</a>
+    <a href="#requests">Emergency Requests</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Dashboard -->
+
+<section id="dashboard" class="dashboard">
+
+    <h2>Emergency Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Reports</h3>
+            <p id="totalReports">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <p id="pendingReports">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Resolved</h3>
+            <p id="resolvedReports">0</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Emergency Report -->
+
+<section id="report" class="report-section">
+
+    <h2>Report an Emergency</h2>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+    >
+
+    <input
+        type="text"
+        id="location"
+        placeholder="Emergency Location"
+    >
+
+    <select id="type">
+
+        <option value="">Select Emergency Type</option>
+
+        <option value="Medical">
+            Medical Emergency
+        </option>
+
+        <option value="Fire">
+            Fire
+        </option>
+
+        <option value="Accident">
+            Road Accident
+        </option>
+
+        <option value="Natural Disaster">
+            Natural Disaster
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+    <select id="priority">
+
+        <option value="">Select Priority</option>
+
+        <option value="High">High</option>
+
+        <option value="Medium">Medium</option>
+
+        <option value="Low">Low</option>
+
+    </select>
+
+    <textarea
+        id="description"
+        placeholder="Describe the emergency"
+    ></textarea>
+
+    <button onclick="reportEmergency()">
+        Submit Emergency Report
+    </button>
+
+    <p id="message"></p>
+
+</section>
+
+<!-- Emergency Requests -->
+
+<section id="requests" class="requests">
+
+    <h2>Emergency Requests</h2>
+
+    <div id="requestList"></div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="contact">
+
+    <h2>Emergency Services</h2>
+
+    <div class="service-container">
+
+        <div class="service">
+            <h3>🚑 Medical</h3>
+            <p>Emergency medical assistance</p>
+        </div>
+
+        <div class="service">
+            <h3>🔥 Fire</h3>
+            <p>Fire and rescue services</p>
+        </div>
+
+        <div class="service">
+            <h3>🚓 Police</h3>
+            <p>Police emergency assistance</p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        For a real emergency, contact your local emergency
+        services directly.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2026 Emergency Response Management Platform</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
